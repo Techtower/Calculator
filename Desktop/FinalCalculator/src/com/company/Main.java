@@ -8,7 +8,7 @@ public class Main {
      public static String calc(String input) throws Exception {
         Scanner console = new Scanner(System.in);                                                                        // Считываем введённые пользователем данные в виде строки
         String numbers = console.nextLine();
-        numbers = numbers.replaceAll("\\s", "");                                                                         // Убираем пробелы в строке
+        numbers = numbers.replaceAll("\\s", "");                                                         // Убираем пробелы в строке
 
 
         String firstSide, secondSide;                                                                                    // Создаём необходимые строки для сортировки
@@ -99,7 +99,7 @@ class Methods {
 
     public static void RomanianNumerals(String firstSide, String secondSide, String numbers) throws Exception {
 
-        String[] Romanian = {"Null","I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
+        String [] Romanian = {"Null","I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
                 "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
                 "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX",
                 "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
@@ -147,7 +147,7 @@ class Methods {
                     result = a / b;
                         if (result <= 0) {
                             throw new Exception("Ошибка! При вычислении получилось отрицательное число. " +
-                                    "В римской системе счисления нет отрицательных чисел");
+                                    "В римской системе счисления нет отрицательных чисел.");
                     }
                     System.out.println(Romanian[result]);
                 }
