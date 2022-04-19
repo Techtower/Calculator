@@ -5,10 +5,10 @@ public class Main {
 
     public static void main(String[] args) {}
 
-    public static String calc(String input) throws Exception {
+     public static String calc(String input) throws Exception {
         Scanner console = new Scanner(System.in);                                                                        // Считываем введённые пользователем данные в виде строки
         String numbers = console.nextLine();
-        numbers = numbers.replaceAll("\\s", "");                                                         // Убираем пробелы в строке
+        numbers = numbers.replaceAll("\\s", "");                                                                         // Убираем пробелы в строке
 
 
         String firstSide, secondSide;                                                                                    // Создаём необходимые строки для сортировки
@@ -67,7 +67,6 @@ public class Main {
                     "система счисления, или от I до X, если применяется римская система счисления! " +
                     "Попробуйте ещё раз!");
         }
-
         return input;
     }
 }
@@ -109,7 +108,7 @@ class Methods {
                 "LXI", "LXII", "LXIII", "LXIV", "LXV", "LXVI", "LXVII", "LXVIII", "LXIX", "LXX",
                 "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII", "LXXVIII", "LXXIX", "LXXX",
                 "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV", "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC",
-                "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C",};
+                "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C"};
 
             int a = 0, b = 0, result;
             for (int i = 0; i < Romanian.length; i++) {
@@ -126,7 +125,7 @@ class Methods {
                 if (numbers.contains("+")) {
                     result = a + b;
                         if (result <= 0) {
-                            throw new Exception("Ошибка! При вычислении получилось отрицательное число. " +
+                            throw new Exception("Ошибка! При вычислении получилось отрицательное число. " +              // Фиксируем исключение при отрицательном ответе в работе с римскими числами
                                     "В римской системе счисления нет отрицательных чисел.");
                         }
                     System.out.println(Romanian[result]);
