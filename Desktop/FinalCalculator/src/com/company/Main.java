@@ -12,7 +12,7 @@ public class Main {
 
      public static String Calc (String input) throws Exception {
 
-        input = input.replaceAll("\\s", "");                                                             // Убираем пробелы в строке
+        input = input.replaceAll("\\s", "");
 
         String firstSide, secondSide;                                                                                    // Создаём необходимые строки для сортировки
         String Arab = "12345678910";
